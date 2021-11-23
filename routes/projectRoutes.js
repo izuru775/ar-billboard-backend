@@ -1,9 +1,14 @@
+const express = require('express');
 const router = express.Router();
 const Controllers = require('../controllers/index');
-const { mapReduce } = require('../models/locationModal');
 
-router.post('/', (req, res) => {
+router.get('/api', (req, res) => {
+    console.log("I'm here")
     Controllers.projectControllers.createProject(req,res)
 });
+router.get('/api/data', (req, res) => {
+    console.log("I'm here too")
+    Controllers.projectControllers.getProjects(req,res)
+});
 
-module.exports = router;
+module.exports = router
