@@ -4,6 +4,7 @@ const { mongo } = require('mongoose');
 const path = require('path');
 const apiRoute = require('./routes/projectRoutes')
 const dbConnect = require('./dbConnect');
+const cors = require("cors")
 
 
 const app = express();
@@ -11,6 +12,7 @@ const app = express();
 app.use(express.json());
 app.use(express.static(__dirname+'/public'));
 app.use(express.urlencoded({extended:true}));
+app.use(cors())
 
 app.use('/',apiRoute);
 
