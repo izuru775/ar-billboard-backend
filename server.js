@@ -5,10 +5,12 @@ const path = require('path');
 const apiRoute = require('./routes/projectRoutes')
 const dbConnect = require('./dbConnect');
 const cors = require("cors")
+const ejs = require('ejs');
 
 
 const app = express();
 
+app.set('view engine', 'ejs');
 app.use(express.json());
 app.use(express.static(__dirname+'/public'));
 app.use(express.urlencoded({extended:true}));

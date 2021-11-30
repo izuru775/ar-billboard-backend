@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <form action="" method="post">
+        <label for="name">Name:</label>
+        <input type="text" id="name" name="name"><br><br>
+        <label for="lat">Latitude:</label>
+        <input type="number" id="lat" name="lat"><br><br>
+        <label for="lng">Longitude:</label>
+        <input type="number" id="lng" name="lng"><br><br>
+        <label for="billboard">Billboard:</label>
+        <input type="text" id="billboard" name="billboard"><br><br>
+        <button type = "submit">ADD NEW LOCATION</button>
+    </form>
+    <% locationlist.forEach(location =>{%> 
+        <p><%= location.name %> </p>
+    <% }) %> 
+</body>
+</html>

@@ -34,5 +34,14 @@ const getAllprojects = (req,res)=>{
         })
         .catch(error=>console.log(error))
 }
+
+const viewAllProjects = (req,res) =>{
+    Location.find({}, (err, locations) =>{
+        res.render('index',  {
+            locationlist: locations
+        });
+    })
+}
 exports.inserProject = inserProject;
 exports.getAllprojects = getAllprojects;
+exports.viewAllProjects = viewAllProjects;
